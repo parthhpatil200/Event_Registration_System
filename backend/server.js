@@ -26,6 +26,7 @@ const MONGO_URI = process.env.MONGO_URI;
 
 
 //-----------comment them if we need to use 2 vm 
+
 //if only one vm i used them keep them 
 
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
