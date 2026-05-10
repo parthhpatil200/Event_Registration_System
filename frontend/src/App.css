@@ -1,0 +1,200 @@
+/* ─── Reset & Base ─────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* ─── App Layout ────────────────────────────────────────────── */
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.app-header {
+  background-color: #4a90d9;
+  color: white;
+  padding: 24px 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.app-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ─── Main Content ──────────────────────────────────────────── */
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ─── Form Section ──────────────────────────────────────────── */
+.form-section {
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #4a90d9;
+}
+
+.form-group input.input-error {
+  border-color: #e53935;
+}
+
+.error-msg {
+  color: #e53935;
+  font-size: 0.82rem;
+  margin-top: 4px;
+}
+
+/* ─── Submit Button ─────────────────────────────────────────── */
+.btn-submit {
+  background-color: #4a90d9;
+  color: white;
+  border: none;
+  padding: 11px 28px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ─── Server Messages ───────────────────────────────────────── */
+.success-msg {
+  margin-top: 12px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.server-error-msg {
+  margin-top: 12px;
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* ─── List Section ──────────────────────────────────────────── */
+.list-section {
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.list-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.no-data {
+  color: #777;
+  font-style: italic;
+}
+
+/* ─── Table ─────────────────────────────────────────────────── */
+.reg-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.reg-table th,
+.reg-table td {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.reg-table th {
+  background-color: #4a90d9;
+  color: white;
+}
+
+.reg-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* ─── Delete Button ─────────────────────────────────────────── */
+.btn-delete {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c62828;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .reg-table th,
+  .reg-table td {
+    padding: 7px 8px;
+    font-size: 0.8rem;
+  }
+}
