@@ -25,14 +25,13 @@ const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
 
-//-----------comment them if we need to use 2 vm 
+//-----------comment them if we need to use 2 vm
+//if only one vm uncomment these (Vite builds to 'dist/', NOT 'build/')
 
-//if only one vm i used them keep them 
-
-// app.use(express.static(path.join(__dirname, "../frontend/build")));
+// app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 // app.use((req, res) => {
-//   res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+//   res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
 // });
 
 
