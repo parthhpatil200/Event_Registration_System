@@ -24,17 +24,24 @@ app.use('/registrations', registrationRoutes);
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-});
+//-----------comment them if we need to use 2 vm 
+//if only one vm i used them keep them 
+
+// app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+// });
+
+
+
 
 mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log('✅ Connected to MongoDB Atlas');
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       console.log(`🚀 Server running on http://localhost:${PORT}`);
     });
   })
