@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 
 /* const API_URL = 'http://localhost:5000/registrations'; */
-const API_URL = 'http://YOUR_PUBLIC_IP:5000/registrations';
+const API_URL = 'http://3.110.159.83:5000/registrations';
 
 const EMPTY_FORM = { name: '', email: '', phone: '' };
 
